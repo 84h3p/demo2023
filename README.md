@@ -26,18 +26,13 @@
 
 **ISP:** `hostnamectl set-hostname ISP`
 
-**CLI:**
+**CLI:** 
 
-![image](https://user-images.githubusercontent.com/43922329/215810811-a77687aa-8f07-4574-aff3-21740b48c2e6.png)
+![image](https://user-images.githubusercontent.com/43922329/215823038-1e02bbcf-5096-47e5-9b13-5033de5f2892.png)
 
-![image](https://user-images.githubusercontent.com/43922329/215810927-6ab11f9d-5ea7-47d7-9c4b-bbfc8e5ac3f8.png)
+![image](https://user-images.githubusercontent.com/43922329/215823058-8847b0f3-af8b-428d-977a-b6dfa0042307.png)
 
-![image](https://user-images.githubusercontent.com/43922329/215810954-ab6fbe82-4bba-4869-9c36-b88598023559.png)
-
-![image](https://user-images.githubusercontent.com/43922329/215810984-c744564c-4dec-4dd0-ab9c-19dbb1f80a6d.png)
-
-![image](https://user-images.githubusercontent.com/43922329/215811029-153cef3f-f80e-468b-8f9b-eaedfbc239ce.png)
-
+![image](https://user-images.githubusercontent.com/43922329/215823084-22e09822-b1ad-489e-a262-0da9889ce7d6.png)
 
 ### 1.3.Адресация должна быть выполнена в соответствии с Таблицей 1;
 
@@ -119,6 +114,18 @@ apt install network-manager
 
 nmtui
 ```
+
+**CLI:**
+
+![image](https://user-images.githubusercontent.com/43922329/215810811-a77687aa-8f07-4574-aff3-21740b48c2e6.png)
+
+![image](https://user-images.githubusercontent.com/43922329/215810927-6ab11f9d-5ea7-47d7-9c4b-bbfc8e5ac3f8.png)
+
+![image](https://user-images.githubusercontent.com/43922329/215810954-ab6fbe82-4bba-4869-9c36-b88598023559.png)
+
+![image](https://user-images.githubusercontent.com/43922329/215810984-c744564c-4dec-4dd0-ab9c-19dbb1f80a6d.png)
+
+![image](https://user-images.githubusercontent.com/43922329/215811029-153cef3f-f80e-468b-8f9b-eaedfbc239ce.png)
 
 ### 1.4.Обеспечьте ВМ дополнительными дисками, если таковое необходимо в соответствии с Таблицей 1
 
