@@ -279,14 +279,48 @@ mkdir /opt/dns
 cp /etc/bind/db.local /opt/dns/demo.db
 chown -R bind:bind /opt/dns
 
-nano /etc/apparmor.d/usr.sbin.names
+nano /etc/apparmor.d/usr.sbin.named
 ```
 
 Прописываем в файл `/opt/dns/** rw,` как на скриншоте.
 
 ![image](https://user-images.githubusercontent.com/43922329/216106902-0c1103ab-9f27-4471-a96d-704ccdb68fae.png)
 
+Открываем файл с настройками :arrow_right: `nano /etc/bind/named.conf.options`
 
-> Спасибо за материалы 
+Здесь нужно раскомметировать и прописать следующее:
+
+```
+forwarders {
+        7.7.7.100;
+};
+```
+
+К тому, же сверяем и по необходимости прописываем:
+```
+dnssec-validation no;
+listen-on-v6 { none; };
+allow-query { any; };
+```
+
+![image](https://user-images.githubusercontent.com/43922329/216119749-4fe4c3b3-5d46-43a0-b580-78eb5cb481c6.png)
+
+Открываем файл с зонами :arrow_right: `nano /etc/bind/named.conf.default-zones`
+
+Добавляем зону demo.wsr
+
+```
+zone "demo.wsr" {
+        type master;
+        allow-transfer { any; };
+        file "opt/dns/demo.db"
+};
+```
+
+![image](https://user-images.githubusercontent.com/43922329/216122208-6aa53fff-b063-412b-88b1-9b7ae18072f0.png)
+
+
+
+> Спасибо за материалы:
 > - https://github.com/cupespresso22/DEMO2022-2023-linux-only
 > - https://angelina-bocharova.blogspot.com/p/2022.html
