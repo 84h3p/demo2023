@@ -229,8 +229,6 @@ network 172.16.1.0 0.0.0.255
 
 # Модуль 2
 
-![image](https://user-images.githubusercontent.com/43922329/216094482-784a4757-348e-4ec0-880f-412ecc8bc559.png)
-
 | Зона         | Тип записи | Ключ     | Значение         |
 |--------------|------------|----------|-----------------|
 | demo.wsr     | A          | isp      | 3.3.3.1         |
@@ -276,7 +274,18 @@ network 172.16.1.0 0.0.0.255
 
 ```
 apt install bind9
+
+mkdir /opt/dns
+cp /etc/bind/db.local /opt/dns/demo.db
+chown -R bind:bind /opt/dns
+
+nano /etc/apparmor.d/usr.sbin.names
 ```
+
+Прописываем в файл `/opt/dns/** rw,` как на скриншоте.
+
+![image](https://user-images.githubusercontent.com/43922329/216106902-0c1103ab-9f27-4471-a96d-704ccdb68fae.png)
+
 
 > Спасибо за материалы 
 > - https://github.com/cupespresso22/DEMO2022-2023-linux-only
