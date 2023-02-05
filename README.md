@@ -146,7 +146,7 @@ nmtui
 
 ## 2. Осуществление выбора технологии, инструментальных средств и средств вычислительной техники при организации процесса разработки и исследования объектов профессиональной деятельности
 
-**ISP:** `nano /etc/sysctl.conf` 
+**ISP:** Открываем файл sysctl ➡️ `nano /etc/sysctl.conf` 
 
 Теперь нужно раскоменнтировать строку `net.ipv4.ip_forward=1`
 
@@ -367,7 +367,7 @@ b. Обслуживается зона int.demo.wsr;
 
 Приводим файл к следующему виду:
 
-![image](https://user-images.githubusercontent.com/43922329/216810457-efea4704-ad58-490a-b932-1a9cba1a68d6.png)
+![image](https://user-images.githubusercontent.com/43922329/216813058-2ecc5962-4964-4f9e-aa6a-3611080d9133.png)
 
 Перезапускаем службу chrony ➡️ `systemctl restart chrony`
 
