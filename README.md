@@ -233,6 +233,7 @@ network 172.16.1.0 0.0.0.255
 |--------------|------------|----------|-----------------|
 | demo.wsr     | A          | isp      | 3.3.3.1         |
 |              | A          | www      | 7.7.7.100       |
+|              | A          | www      | 8.8.8.100       |
 |              | CNAME      | internet | isp             |
 |              |            |          |                 |
 | int.demo.wsr | A          | web-l    | 192.168.100.100 |
@@ -313,7 +314,7 @@ allow-query { any; };
 zone "demo.wsr" {
         type master;
         allow-transfer { any; };
-        file "opt/dns/demo.db"
+        file "/opt/dns/demo.db"
 };
 ```
 
@@ -323,7 +324,7 @@ zone "demo.wsr" {
 
 Приводим файл к следующему виду:
 
-![image](https://user-images.githubusercontent.com/43922329/216279202-5e8f8503-894f-4cae-92c5-1df507798ad6.png)
+![image](https://user-images.githubusercontent.com/43922329/217020856-b727af99-0a2f-4a3f-be91-95cfd12d6b2b.png)
 
 Перезапускаем службы:
 
