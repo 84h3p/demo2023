@@ -106,8 +106,7 @@ nmtui
 
 ![image](https://user-images.githubusercontent.com/43922329/215805313-93d9f009-6236-4f68-8ef9-7adedb6208c8.png)
 
-
-![image](https://user-images.githubusercontent.com/43922329/215805161-d17d90e7-f9de-4b87-91fa-691bfdc3a06f.png)
+![image](https://user-images.githubusercontent.com/43922329/217185517-0e145616-0cfa-4371-bbd9-85043aa7e359.png)
 
 **WEB-R:**
 
@@ -120,7 +119,7 @@ nmtui
 
 ![image](https://user-images.githubusercontent.com/43922329/215805318-5d0675f9-ac58-48a1-bb63-ab20d5b53ea4.png)
 
-![image](https://user-images.githubusercontent.com/43922329/215804986-ed9892b0-586d-47d0-9ad0-d62c12295277.png)
+![image](https://user-images.githubusercontent.com/43922329/217185606-3c6211d4-9c97-40b1-9dae-8de047202f99.png)
 
 **ISP:**
 
