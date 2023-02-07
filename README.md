@@ -394,15 +394,45 @@ b. Обслуживается зона int.demo.wsr;
 
 **SRV:**
 
-...
+В Powershell ISE пишим: `w32tm /config /manualpeerlist:7.7.7.1 /syncfromflags:manual /reliable:yes /update`
 
 **WEB-L:**
 
-...
+Устанавливаем chrony :arrow_right: `apt install chrony`
+
+Добавляем строку `pool ntp.int.demo.wsr iburst`
+
+Перезапускаем службу `systemctl restart chrony`
 
 **WEB-R:**
 
-...
+Устанавливаем chrony :arrow_right: `apt install chrony`
+
+Добавляем строку `pool ntp.int.demo.wsr iburst`
+
+Перезапускаем службу `systemctl restart chrony`
+
+
+**RTR-L:**
+
+```
+ip domain name int.demo.wsr
+
+ip name-server 192.168.100.200
+
+ntp server ntp.int.demo.wsr
+```
+
+**RTR-R:**
+
+```
+ip domain name int.demo.wsr
+
+ip name-server 192.168.100.200
+
+ntp server ntp.int.demo.wsr
+```
+
 
 > Спасибо за материалы:
 > - https://github.com/cupespresso22/DEMO2022-2023-linux-only
