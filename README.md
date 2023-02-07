@@ -443,6 +443,67 @@ ip name-server 192.168.100.200
 ntp server ntp.int.demo.wsr
 ```
 
+### 2.5. Реализуйте файловый SMB-сервер на базе SRV
+
+- Сервер должен предоставлять доступ для обмена файлами серверам WEB-L и WEB-R;
+- Сервер, в зависимости от ОС, использует следующие каталоги для хранения файлов:
+        
+/mnt/storage для система на базе Linux;
+
+Диск R:\ для систем на базе Windows;
+
+- Хранение файлов осуществляется на диске (смонтированном по указанным выше адресам), реализованном по технологии RAID типа “Зеркало”;
+
+**SRV:**
+
+Создаем RAID1 в менеджере дисков.
+
+Даем ему метку R, делаем из него шару. Название даем share.
+
+Выдаем доступ на чтение и запись нужной учётке.
+
+**WEB-L:**
+
+Создаем папку share :arrow_right: mkdir /opt/share
+
+
+Устанавливаем cifs `apt install cifs-utils`
+
+Создаем файл с данными учетки :arrow_right: `nano /root/.smbshare`
+
+В файле .smbshare вводим следующие данные:
+
+```
+username=Логин учётки
+password=Пароль учётки
+```
+
+Открываем файл fstab :arrow_right: `nano /etc/fstab`
+
+Добавляем в него строку `//srv.int.demo.wsr/share /opt/share cifs user,rw,credentials=/root/.smbshare 0 0`
+
+Монтируем шару `mount -a`
+
+**WEB-R:**
+
+Создаем папку share :arrow_right: mkdir /opt/share
+
+Устанавливаем cifs `apt install cifs-utils`
+
+Создаем файл с данными учетки :arrow_right: `nano /root/.smbshare`
+
+В файле .smbshare вводим следующие данные:
+
+```
+username=Логин учётки
+password=Пароль учётки
+```
+
+Открываем файл fstab :arrow_right: `nano /etc/fstab`
+
+Добавляем в него строку `//srv.int.demo.wsr/share /opt/share cifs user,rw,credentials=/root/.smbshare 0 0`
+
+Монтируем шару `mount -a`
 
 > Спасибо за материалы:
 > - https://github.com/cupespresso22/DEMO2022-2023-linux-only
