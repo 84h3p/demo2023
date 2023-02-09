@@ -106,7 +106,7 @@ nmtui
 
 ![image](https://user-images.githubusercontent.com/43922329/215805313-93d9f009-6236-4f68-8ef9-7adedb6208c8.png)
 
-![image](https://user-images.githubusercontent.com/43922329/217185517-0e145616-0cfa-4371-bbd9-85043aa7e359.png)
+![image](https://user-images.githubusercontent.com/43922329/217788934-a43f6802-bc71-43b1-aae5-6f1f81736f74.png)
 
 **WEB-R:**
 
@@ -119,7 +119,7 @@ nmtui
 
 ![image](https://user-images.githubusercontent.com/43922329/215805318-5d0675f9-ac58-48a1-bb63-ab20d5b53ea4.png)
 
-![image](https://user-images.githubusercontent.com/43922329/217185606-3c6211d4-9c97-40b1-9dae-8de047202f99.png)
+![image](https://user-images.githubusercontent.com/43922329/217789159-5d4a4959-6df8-42f4-b730-d71a5c4558f3.png)
 
 **ISP:**
 
@@ -253,12 +253,15 @@ network 172.16.1.0 0.0.0.255
 ### 1.2. Обеспечьте настройку служб SSH региона Left:
 
 - Подключения со стороны внешних сетей по протоколу к платформе управления трафиком RTR-L на порт 2222 должны быть перенаправлены на ВМ Web-L;
-
-**RTR-L:** `ip nat inside source static tcp 192.168.100.100 22 7.7.7.100 2222`
-
 - Подключения со стороны внешних сетей по протоколу к платформе управления трафиком RTR-L на порт 2244 должны быть перенаправлены на ВМ WEB-R.
 
-**RTR-R:** `ip nat inside source static tcp 172.16.100.100 22 8.8.8.100 2244`
+
+**RTR-L:** 
+```
+ip nat inside source static tcp 192.168.100.100 22 7.7.7.100 2222
+
+ip nat inside source static tcp 172.16.100.100 22 7.7.7.100 2244
+```
 
 ### 2.1. Выполните настройку первого уровня DNS-системы стенда
 
