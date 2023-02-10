@@ -336,8 +336,7 @@ zone "demo.wsr" {
 
 Приводим файл к следующему виду:
 
-![image](https://user-images.githubusercontent.com/43922329/217232474-c4d206f2-32a3-4ca0-b001-29fda4e7a481.png)
-
+![image](https://user-images.githubusercontent.com/43922329/218047192-e7ad6554-c549-45d4-ba1a-38aeef00fb42.png)
 
 Перезапускаем службы:
 
