@@ -418,7 +418,15 @@ b. Обслуживается зона int.demo.wsr;
 
 Устанавливаем chrony :arrow_right: `apt install chrony`
 
-Добавляем строку `pool ntp.int.demo.wsr iburst`
+Добавляем строчки
+
+```
+pool ntp.int.demo.wsr iburst
+
+maxdistance 16.0
+```
+
+![image](https://user-images.githubusercontent.com/43922329/218083886-22070cbf-187a-43b1-9d64-930b322ec7f7.png)
 
 Перезапускаем службу `systemctl restart chrony`
 
@@ -426,7 +434,16 @@ b. Обслуживается зона int.demo.wsr;
 
 Устанавливаем chrony :arrow_right: `apt install chrony`
 
-Добавляем строку `pool ntp.int.demo.wsr iburst`
+Добавляем строчки
+
+```
+pool ntp.int.demo.wsr iburst
+
+maxdistance 16.0
+```
+
+![image](https://user-images.githubusercontent.com/43922329/218083886-22070cbf-187a-43b1-9d64-930b322ec7f7.png)
+
 
 Перезапускаем службу `systemctl restart chrony`
 
