@@ -326,7 +326,7 @@ allow-query { any; };
 zone "demo.wsr" {
         type master;
         allow-transfer { any; };
-        file "/opt/dns/demo.db"
+        file "/opt/dns/demo.db";
 };
 ```
 
