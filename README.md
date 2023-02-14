@@ -412,7 +412,7 @@ b. Обслуживается зона int.demo.wsr;
 
 **SRV:**
 
-В Powershell ISE пишим: `w32tm /config /manualpeerlist:7.7.7.1 /syncfromflags:manual /reliable:yes /update`
+Настраиваем службу времени через Powershell ISE :arrow_right: `w32tm /config /manualpeerlist:7.7.7.1 /syncfromflags:manual /reliable:yes /update`
 
 **WEB-L:**
 
