@@ -358,9 +358,47 @@ b. Обслуживается зона int.demo.wsr;
 
 **SRV:**
 
+Устанавливаем AD DS
+
+![image](https://user-images.githubusercontent.com/43922329/218957073-100946ec-6933-4622-af36-810b67ab4483.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218957228-9e297f03-3899-4fc0-b5ea-3017b3790253.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218957448-d932c0ac-539e-4252-afd9-62ceb398601d.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218958308-40a471f3-1fc2-411c-bc91-9009c0ec190f.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218958733-725cbf2c-cfe7-44fd-8415-3f4d214d24fb.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218958885-bdea98ca-7c37-45c8-a463-eff1c73947cb.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218958992-a6fa73a6-8154-4ef5-814f-66c1480188b3.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218959160-45313c94-acf8-4578-a649-aa08b3895196.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218959587-814fc400-5e00-4652-bffe-08af80686381.png)
+
+
 Создаем контроллер домена с зоной `int.demo.wsr` 
 
+![image](https://user-images.githubusercontent.com/43922329/218959707-31f279e1-c95b-4546-b37d-11b91840f0e8.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218959907-3dbcef09-35f2-4ed6-b553-31968d62c0dd.png)
+
 ![image](https://user-images.githubusercontent.com/43922329/218066299-40a9d22a-c7ab-4864-925f-db47a805743e.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218960299-45fdcc92-1e0b-49e2-a0da-cbcdbd3c86dc.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218960434-e580756f-2645-4b01-a4e1-bd439508c5b2.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218960760-4f0f4b29-3b78-42cb-ad48-7a5153e5d381.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218961058-79c0d161-e600-4e8b-ae88-db695184eb66.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218961213-709e5192-8427-4d75-a934-d2bfa5aed1b6.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218961458-61ed555e-7df2-4d4f-8408-f8bd4bd5c7d6.png)
+
 
 После настройки контролллера домена наполняем сервер записями в соответствии с таблицей 2.
 
@@ -540,6 +578,7 @@ password=Пароль учётки
 Организация DEMO.WSR;
 
 Прочие поля (за исключением CN) должны быть пусты;
+
 
 > Спасибо за материалы:
 > - https://github.com/cupespresso22/DEMO2022-2023-linux-only
