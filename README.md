@@ -523,7 +523,24 @@ ntp server ntp.int.demo.wsr
 
 Даем ему метку R, делаем из него шару. Название даем share.
 
+![image](https://user-images.githubusercontent.com/43922329/219453829-5912078a-54e0-4dc6-accb-ed1a0866e4e5.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219454045-7ed7142b-5a9c-4be9-b001-58be0e625382.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219454463-bb54302f-41e6-4135-8114-74d59bbddc8a.png)
+
+
 Выдаем доступ на чтение и запись нужной учётке.
+
+![image](https://user-images.githubusercontent.com/43922329/219454790-441ca3eb-32b5-4edf-96ce-f8cbf71ce78f.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219454937-e30dd3e7-f5b3-481f-b27f-4407feea6fd8.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219455428-8a591d5e-d1ec-4370-8f62-695be91bc9d0.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219455650-8e1fec73-4729-4f1b-9f61-f09ccef5b2e2.png)
+
+
 
 **WEB-L:**
 
