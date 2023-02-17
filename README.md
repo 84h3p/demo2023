@@ -588,13 +588,73 @@ password=Пароль учётки
 2.7. Выполните настройку центра сертификации на базе SRV:
 - В случае применения решения на базе Linux используется центр сертификации типа OpenSSL и располагается по адресу /var/ca;
 - Выдаваемые сертификаты должны иметь срок жизни не менее 500 дней;
-- Параметры выдаваемых сертификатов:
 
-Страна RU;
+Параметры выдаваемых сертификатов:
 
-Организация DEMO.WSR;
+- Страна RU;
 
-Прочие поля (за исключением CN) должны быть пусты;
+- Организация DEMO.WSR;
+
+- Прочие поля (за исключением CN) должны быть пусты;
+
+Устанавливаем центр сертификации AD CS
+
+![image](https://user-images.githubusercontent.com/43922329/218957073-100946ec-6933-4622-af36-810b67ab4483.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218957228-9e297f03-3899-4fc0-b5ea-3017b3790253.png)
+
+![image](https://user-images.githubusercontent.com/43922329/218957448-d932c0ac-539e-4252-afd9-62ceb398601d.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219578243-b0bc3063-1b85-434a-a963-d4beddd1978d.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219578471-89f83286-6001-4c7b-8390-a3f93fc67a46.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219578599-0aaf2b76-ae1c-4da3-8394-00080789ef54.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219578858-95907cac-3eab-422a-85b9-a0172322094c.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219578995-46c06bed-2ce0-41cc-ad5b-58a81ec499c8.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219579091-4c7350d1-84b6-4591-9032-6caff791034b.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219579193-b5655255-c5b9-430a-afd4-feae35829c75.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219579564-66742f8b-ede4-45a2-8e12-03139f017adc.png)
+
+Настраиваем AD CS
+
+![image](https://user-images.githubusercontent.com/43922329/219580698-09c27a4f-eb9e-4f1a-a45c-f3576faafd85.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219580950-e301ca18-3df2-4032-8851-a29b499d517e.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219581138-d338462a-a98b-4704-8e91-5cf5e6a7a365.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219581427-e9aaa94d-41e1-4980-baca-6311ba0503ac.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219581576-6c8fab3f-bba0-4583-a2a9-c62d96a0eec6.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219581747-a201f4d3-c882-4f49-921b-e84f754ae5ce.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219582083-f8179651-1f92-4f46-9239-a69e511e0b90.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219582277-673b72b6-3eb1-4d1d-8b77-cf32d2ed3c9e.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219582437-ae26ac58-1986-4d22-9b8a-edef06b7ca7b.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219582554-1f46d3f6-8d71-4926-b819-816d2e22af2f.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219582696-87c84ce5-ece9-4c37-8862-bbcd9265ccf6.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219582813-e125bd2b-06fd-4a79-92fb-d594c9e5b518.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219580698-09c27a4f-eb9e-4f1a-a45c-f3576faafd85.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219583123-2d1845dd-bdd5-4004-8ecd-9f716a25861c.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219583236-c6e2eb10-abe9-4f78-883b-531b0bc82a43.png)
+
+![image](https://user-images.githubusercontent.com/43922329/219583420-a7383eb4-7b75-4665-bb96-8053064fce42.png)
+
 
 
 > Спасибо за материалы:
