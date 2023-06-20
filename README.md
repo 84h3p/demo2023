@@ -540,7 +540,7 @@ ntp server ntp.int.demo.wsr
 
 ![image](https://user-images.githubusercontent.com/43922329/219455650-8e1fec73-4729-4f1b-9f61-f09ccef5b2e2.png)
 
-
+### Сервера WEB-L и WEB-R должны использовать службу, настроенную на SRV, для обмена файлами между собой
 
 **WEB-L:**
 
@@ -655,7 +655,127 @@ password=Пароль учётки
 
 ![image](https://user-images.githubusercontent.com/43922329/219583420-a7383eb4-7b75-4665-bb96-8053064fce42.png)
 
+### Получение сертификата
 
+![image](https://github.com/84h3p/demo2023/assets/43922329/4956ea12-f12e-4432-bc92-9309f922b9e2)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/f5375d17-7fe2-4b84-82e8-b7d75c24c867)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/ddcdbde8-0e55-4855-a17e-58166526189a)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/3591b0ec-a5a3-416f-b4c0-373a6e6fb168)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/0c746dea-a3c9-4850-8542-ff772e73308d)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/f6bdddc2-d85f-423f-9ce4-1b662119a513)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/79779c49-9c87-41d5-99a0-9584d9192a41)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/23e32023-3570-492c-9dd7-5674193f48a0)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/7d7ebc48-b1af-4aeb-93af-863a0b8b5d7b)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/7d3dabb4-fdcb-44e0-b57a-f275bb4ac490)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/c809a856-dc1d-41ed-a747-e33d5d854557)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/78f4e205-6f4a-4ef4-9670-c61083c41fd1)
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/25998cc5-bf5a-4ae5-b550-c9dfb88a9cfd)
+
+### Установка сертификатов
+
+**WEB-L:**
+
+`apt install -y nginx`
+
+`cd /opt/share`
+
+`openssl pkcs12 -nodes -nocerts -in www.pfx -out www.key`
+
+`openssl pkcs12 -nodes -nokeys -in www.pfx -out www.cer`
+
+`cp /opt/share/www.key /etc/nginx/www.key`
+
+`cp /opt/share/www.cer /etc/nginx/www.cer`
+
+`nano /etc/nginx/snippets/snakeoil.conf`
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/cfc89cbd-5d9b-45ca-9422-a1e1215ef007)
+
+`nano /etc/nginx/sites-avaliable/default`
+
+```
+upstream backend { 
+ server 192.168.100.100:8080 fail_timeout=25; 
+ server 172.16.100.100:8080 fail_timeout=25; 
+} 
+ 
+server { 
+    listen 443 ssl default_server; 
+    include snippers/snakeoil.config;
+
+    server_name www.demo.wsr; 
+
+ location / { 
+  proxy_pass http://backend ;
+ } 
+}
+
+server { 
+  listen 80  default_server; 
+  server_name _; 
+  return 301 https://www.demo.wsr;
+
+}
+```
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/8f01dc00-963f-4f47-95ae-7d812ca95557)
+
+`systemctl restart nginx`
+
+**WEB-R:**
+
+`apt install nginx`
+
+`cp /opt/share/www.key /etc/nginx/www.key`
+
+`cp /opt/share/www.cer /etc/nginx/www.cer`
+
+`nano /etc/nginx/snippets/snakeoil.conf`
+
+![image](https://github.com/84h3p/demo2023/assets/43922329/818185f4-026e-4a77-b676-bacfd89339b0)
+
+`nano /etc/nginx/sites-available/default`
+
+``` 
+upstream backend {
+        server 192.168.100.100:8080 fail_timeout=25;
+        server 172.16.100.100:8080 fail_timeout=25;
+}
+
+server {
+        listen 443 ssl default_server;
+        include snippets/snakeoil.conf;
+
+        server_name www.demo.wsr;
+
+        location / {
+                proxy_pass http://backend;
+        }
+}
+
+server {
+        listen 80 default_server;
+        server_name _;
+        return 301 https://www.demo.wsr
+}
+```
+`systemctl restart nginx`
+
+### 3 Взаимодействие со специалистами смежного профиля при разработке методов, средств и технологий применения объектов профессиональной деятельности
+
+...
 
 > Спасибо за материалы:
 > - https://github.com/cupespresso22/DEMO2022-2023-linux-only
